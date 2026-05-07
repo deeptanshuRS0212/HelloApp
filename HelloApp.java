@@ -5,14 +5,7 @@ public class HelloApp {
             return;
         }
 
-        String namesWithDelimiter = "";
-
-        for (String name : args) {
-            namesWithDelimiter = namesWithDelimiter + name + ", ";
-        }
-
-        String allNames = namesWithDelimiter.substring(0, namesWithDelimiter.length() - 2);
-
+        String allNames = String.join(", ", args);
         System.out.println("Hello, " + allNames + "!");
     }
 }
