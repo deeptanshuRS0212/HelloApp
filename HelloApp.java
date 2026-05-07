@@ -6,13 +6,14 @@ public class HelloApp {
         }
 
         StringBuilder allNames = new StringBuilder();
+        int position = 0;
 
-        for (int index = 0; index < args.length; index++) {
-            allNames.append(args[index]);
-
-            if (index < args.length - 1) {
+        for (String name : args) {
+            allNames.append(name);
+            if (position < args.length - 1) {
                 allNames.append(", ");
             }
+            position++;
         }
 
         System.out.println("Hello, " + allNames + "!");
