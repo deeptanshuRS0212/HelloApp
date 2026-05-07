@@ -5,16 +5,13 @@ public class HelloApp {
             return;
         }
 
-        StringBuilder allNames = new StringBuilder();
-        int position = 0;
+        String namesWithDelimiter = "";
 
         for (String name : args) {
-            allNames.append(name);
-            if (position < args.length - 1) {
-                allNames.append(", ");
-            }
-            position++;
+            namesWithDelimiter = namesWithDelimiter + name + ", ";
         }
+
+        String allNames = namesWithDelimiter.substring(0, namesWithDelimiter.length() - 2);
 
         System.out.println("Hello, " + allNames + "!");
     }
